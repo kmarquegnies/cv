@@ -1,2 +1,2 @@
-section{display:flex;flex-direction:column}article{display:flex;flex-direction:column;align-items:center}article h2{padding:1.1em;border-radius:1em;font-weight:bold}.blue_back{background-color:#C0D6DF}img{width:2em}
+section{display:flex;flex-direction:column}article{display:flex;flex-direction:column;align-items:center}article h2{padding:1em 1.5em;border-radius:0.8em;font-weight:bold;text-transform:uppercase}.blue_back{background-color:#C0D6DF}.white_back{background-color:white}img{width:2em}
 /*# sourceMappingURL=index.min.css.map */

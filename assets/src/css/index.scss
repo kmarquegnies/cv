@@ -9,14 +9,19 @@ article {
     align-items: center;
 
     h2 {
-        padding: 1.1em;
-        border-radius: 1em;
+        padding: 1em 1.5em;
+        border-radius: 0.8em;
         font-weight: bold;
+        text-transform: uppercase;
     }
 }
 
 .blue_back {
     background-color: #C0D6DF;
+}
+
+.white_back {
+    background-color: white;
 }
 
 img {
