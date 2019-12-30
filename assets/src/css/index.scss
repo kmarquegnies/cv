@@ -1,0 +1,230 @@
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4em;
+
+    h2 {
+        padding: 1em 1.5em;
+        border-radius: 0.8em;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 2em;
+        margin-top: 2em;
+    }
+
+    h4 {
+        margin-bottom: 2em;
+    }
+}
+
+.blue_back {
+    background-color: #C0D6DF;
+
+}
+
+.white_back {
+    background-color: white;
+}
+
+
+#photo_text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+        width: 25em;
+    }
+
+    #about_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+    }
+}
+
+#skills {
+    padding-bottom: 3em;
+
+    #list_skills {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 0;
+
+        .category {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .logo {
+                display: flex;
+                justify-content: center;
+                width: 90%;
+                justify-content: space-between;
+                height: max-content;
+
+                .logo_title {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding-bottom: 0;
+                    height: max-content;
+                }
+
+                img {
+                    height: 40%;
+                    z-index: 500;
+                }
+
+                img:hover {
+                    animation: bounce 0.35s ease infinite alternate;
+
+
+                    @keyframes bounce {
+                        from {
+                            transform: translateY(0);
+                        }
+
+                        to {
+                            transform: translateY(-20px);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+#schooling,
+#experience {
+    padding-bottom: 3em;
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            margin-top: 3em;
+        }
+    }
+}
+
+#achievement {
+
+    #achievs {
+        display: flex;
+        justify-content: space-around;
+
+        .project {
+            width: 18%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+#hobbies {
+    padding-bottom: 3em;
+
+    #pictures {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 1em;
+
+        .picture_animation {
+            img {
+                width: 15em;
+            }
+
+            p {
+                text-transform: uppercase;
+                font-weight: bold;
+                width: max-content;
+                position: relative;
+                bottom: 50%;
+                left: 30%;
+                visibility: hidden;
+            }
+
+            #boardgame {
+                position: relative;
+                bottom: 50%;
+                left: 23%;
+            }
+
+            #jogging {
+                position: relative;
+                bottom: 50%;
+                left: 25%;
+            }
+
+        }
+    }
+}
+
+#contact {
+    #contact_categories {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+
+        .contact_category {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #envelope {
+            cursor: pointer;
+        }
+
+        #mail {
+            visibility: hidden;
+            color: black;
+        }
+
+        #mail:hover {
+            color: #808782;
+        }
+
+        #find_logo {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+}
+
+
+.fa-chevron-circle-up {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    font-size: 2em;
+    z-index: 9999;
+    color: black;
+    visibility: hidden;
+}
