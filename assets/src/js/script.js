@@ -52,3 +52,25 @@ enveloppe.addEventListener("click", function () {
     mail.style.visibility = "visible";
   }
 });
+
+
+/*--FAIS APPARAITRE LE MENU EN RESPONSIVE--*/
+var contentMenu = document.getElementById("menu").innerHTML;
+var responsiveMenu = document.getElementById("list_menu");
+
+responsiveMenu.innerHTML = contentMenu;
+
+var menuIcon = document.getElementsByClassName("fa-bars")[0];
+var closeicon = document.getElementsByClassName("fa-times")[0];
+
+function menuAppear() {
+  if (responsiveMenu.style.display == "block") {
+    menuIcon.style.display = "block";
+    closeicon.style.display = "none";
+    responsiveMenu.style.display = "none";
+  } else {
+    menuIcon.style.display = "none";
+    closeicon.style.display = "block";
+    responsiveMenu.style.display = "block";
+  }
+}

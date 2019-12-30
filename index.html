@@ -19,7 +19,7 @@
 			<h2>Développeur Web / Mobile Junior</h2>
 		</div>
 		<nav>
-			<ul>
+			<ul id="menu">
 				<li><a href="#about">A propos</a></li>
 				<li><a href="#skills">Compétences</a></li>
 				<li><a href="#schooling">Formations</a></li>
@@ -28,6 +28,12 @@
 				<li><a href="#hobbies">Loisirs</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
+
+			<div id="responsive_menu">
+				<i class="fas fa-bars" onclick="menuAppear()"></i>
+				<i class="fas fa-times" onclick="menuAppear()"></i>
+				<ul id="list_menu"></ul>
+			</div>
 		</nav>
 	</header>
 	<section id="page_content">
