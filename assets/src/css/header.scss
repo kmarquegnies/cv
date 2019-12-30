@@ -1,11 +1,10 @@
-
 header {
     width: 100%;
     display: flex;
     flex-direction: column;
     color: white;
     scroll-behavior: smooth;
-    
+
     h1 {
         text-transform: uppercase;
     }
@@ -24,20 +23,55 @@ header {
 nav {
     background-color: #656565;
     z-index: 10000;
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    #responsive_menu {
+        display: none;
+        text-align: center;
+
+        i{
+            font-size: 1.5em;
+            margin: 0.5em;
+            cursor: pointer;
+        }
+
+        .fa-times {
+            display:none;
+            
+        }
+        #list_menu {
+            display: none;
+            text-align: center;
+            margin-top: 0;
+
+            li {
+                margin: 0.5em;
+            }
+        }
+    }
+
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    padding:0;
-}
 
 .fixed {
     position: fixed;
     top: 0;
     width: 100%;
-  }
+}
 
+@media(max-width: 768px) {
+    nav {
+        #menu {
+            display: none;
+        }
 
-
-
+        #responsive_menu {
+            display: block
+        }
+    }
+}

@@ -19,7 +19,7 @@
 			<h2>Développeur Web / Mobile Junior</h2>
 		</div>
 		<nav>
-			<ul>
+			<ul id="menu">
 				<li><a href="#about">A propos</a></li>
 				<li><a href="#skills">Compétences</a></li>
 				<li><a href="#schooling">Formations</a></li>
@@ -28,6 +28,12 @@
 				<li><a href="#hobbies">Loisirs</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
+
+			<div id="responsive_menu">
+				<i class="fas fa-bars" onclick="menuAppear()"></i>
+				<i class="fas fa-times" onclick="menuAppear()"></i>
+				<ul id="list_menu"></ul>
+			</div>
 		</nav>
 	</header>
 	<section id="page_content">
@@ -127,21 +133,30 @@
 			<h2 class="blue_back">réalisations</h2>
 			<div id="achievs">
 				<div id="naheulbeuk" class="project">
-					<h4>Développement d'un générateur de personnage pour le jeu de rôle "Le donjon de Naheulbeuk"</h4>
-					<p><em>Réalisé avec le langage Ruby</em></p>
+					<div class="project_description">
+						<h4>Développement d'un générateur de personnage pour le jeu de rôle "Le donjon de Naheulbeuk"
+						</h4>
+						<p><em>Réalisé avec le langage Ruby</em></p>
+					</div>
 					<a href="download/naheulbeuk.rb" class="button">Télécharger</a>
 				</div>
 				<div id="runzik" class="project">
-					<h4>Maquettage et intégration de plusieurs pages pour la société fictive Run'Zik dans une projet de
-						groupe</h4>
-					<p><em>Réalisé avec les langages HTML, CSS et Javascript</em></p>
+					<div class="project_description">
+						<h4>Maquettage et intégration de plusieurs pages pour la société fictive Run'Zik dans une projet
+							de
+							groupe</h4>
+						<p><em>Réalisé avec les langages HTML, CSS et Javascript</em></p>
+					</div>
 					<a href="#" class="button">Visualiser</a>
 				</div>
 				<div id="servdrone" class="project">
-					<h4>Maquettage et intégration de plusieurs pages pour la société fictive Serv'Drone dans une projet
-						de groupe
-					</h4>
-					<p><em>Réalisé avec les langages HTML, CSS et Javascript</em></p>
+					<div class="project_description">
+						<h4>Maquettage et intégration de plusieurs pages pour la société fictive Serv'Drone dans une
+							projet
+							de groupe
+						</h4>
+						<p><em>Réalisé avec les langages HTML, CSS et Javascript</em></p>
+					</div>
 					<a href="#" class="button">Visualiser</a>
 				</div>
 			</div>
@@ -149,22 +164,26 @@
 		<article id="hobbies" class="blue_back">
 			<h2 class="white_back">loisirs</h2>
 			<div id="pictures">
-				<div class="picture_animation" onmouseover="textAppear(0)">
-					<img src="assets/images/rpg.jpg" alt="jeu de rôle papier" class="hobby_picture" />
-					<p class="picture_text">Jeux de rôle</p>
+				<div class="pictures_bloc">
+					<div class="picture_animation" onmouseover="textAppear(0)">
+						<img src="assets/images/rpg.jpg" alt="jeu de rôle papier" class="hobby_picture" />
+						<p class="picture_text">Jeux de rôle</p>
+					</div>
+					<div class="picture_animation" onmouseover="textAppear(1)">
+						<img src="assets/images/videogames.jpg" alt="manette de ps4 tenue devant un écran"
+							class="hobby_picture" />
+						<p class="picture_text">Jeux vidéos</p>
+					</div>
 				</div>
-				<div class="picture_animation" onmouseover="textAppear(1)">
-					<img src="assets/images/videogames.jpg" alt="manette de ps4 tenue devant un écran"
-						class="hobby_picture" />
-					<p class="picture_text">Jeux vidéos</p>
-				</div>
-				<div class="picture_animation" onmouseover="textAppear(2)">
-					<img src="assets/images/jds.jpg" alt="plateau de jeu d'échec" class="hobby_picture" />
-					<p class="picture_text" id="boardgame">Jeux de société</p>
-				</div>
-				<div class="picture_animation" onmouseover="textAppear(3)">
-					<img src="assets/images/jogging.jpg" alt="homme faisant son jogging" class="hobby_picture" />
-					<p class="picture_text" id="jogging">Course à pied</p>
+				<div class="pictures_bloc">
+					<div class="picture_animation" onmouseover="textAppear(2)">
+						<img src="assets/images/jds.jpg" alt="plateau de jeu d'échec" class="hobby_picture" />
+						<p class="picture_text" id="boardgame">Jeux de société</p>
+					</div>
+					<div class="picture_animation" onmouseover="textAppear(3)">
+						<img src="assets/images/jogging.jpg" alt="homme faisant son jogging" class="hobby_picture" />
+						<p class="picture_text" id="jogging">Course à pied</p>
+					</div>
 				</div>
 			</div>
 		</article>
@@ -187,7 +206,8 @@
 				</div>
 				<div id="download" class="contact_category">
 					<h4>Téléchargez mon CV</h4>
-					<a href="download/cv.pdf" target="_blank"><img src="assets/src/images/cv.svg" alt="icone de CV" /></a>
+					<a href="download/cv.pdf" target="_blank"><img src="assets/src/images/cv.svg"
+							alt="icone de CV" /></a>
 				</div>
 			</div>
 		</article>
