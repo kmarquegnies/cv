@@ -1,4 +1,5 @@
 /*--FIXE LE MENU EN HAUT DE LA PAGE--*/
+/*--AJOUTE UN ELEMENT POUR REMONTER EN HAUT DE PAGE--*/
 
 //Récupère le menu dans une variable
 var menu = document.getElementsByTagName("nav")[0];
@@ -6,7 +7,9 @@ var menu = document.getElementsByTagName("nav")[0];
 //Récupère la position offset du menu
 var fixe = menu.offsetTop;
 
+//Récupère l'icône chevron-haut dans une variable
 var topScroll = document.getElementsByClassName("fa-chevron-circle-up")[0];
+
 /*Si la position offset de la page est supérieure ou 
 égale à la position offset du menu alors le menu 
 obtient la classe fixed qui le rend fixe et 
