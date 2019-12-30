@@ -217,3 +217,14 @@ article {
     }
 
 }
+
+
+.fa-chevron-circle-up {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    font-size: 2em;
+    z-index: 9999;
+    color: black;
+    visibility: hidden;
+}
