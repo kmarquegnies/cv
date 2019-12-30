@@ -4,6 +4,7 @@ header {
     display: flex;
     flex-direction: column;
     color: white;
+    scroll-behavior: smooth;
     
     h1 {
         text-transform: uppercase;

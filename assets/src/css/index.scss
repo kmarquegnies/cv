@@ -25,6 +25,7 @@ article {
 
 .blue_back {
     background-color: #C0D6DF;
+
 }
 
 .white_back {
@@ -198,9 +199,14 @@ article {
         #envelope {
             cursor: pointer;
         }
-        
+
         #mail {
             visibility: hidden;
+            color: black;
+        }
+
+        #mail:hover {
+            color: #808782;
         }
 
         #find_logo {

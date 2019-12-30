@@ -14,7 +14,8 @@ module.exports = function(grunt) {
             'assets/css/special.min.css': 'assets/src/css/special.scss',
             'assets/css/header.min.css' : 'assets/src/css/header.scss',
             'assets/css/common.min.css' : 'assets/src/css/common.scss',
-            'assets/css/index.min.css' : 'assets/src/css/index.scss'
+            'assets/css/index.min.css' : 'assets/src/css/index.scss',
+            'assets/css/footer.min.css' : 'assets/src/css/footer.scss',
           }
         }
         },
