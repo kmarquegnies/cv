@@ -1,4 +1,3 @@
-
 /*--FIXE LE MENU EN HAUT DE LA PAGE--*/
 
 //Récupère le menu dans une variable
@@ -21,22 +20,29 @@ window.addEventListener("scroll", function () {
 });
 
 
-/*--FAIS APPARAITRE LE TEXTE DES IMAGES LOISIR--*/
+/*--FAIS APPARAITRE/DISPARAITRE LE TEXTE DES IMAGES LOISIR--*/
 function textAppear(number) {
   var text = document.getElementsByClassName("picture_text")[number];
   var pictureBloc = document.getElementsByClassName("picture_animation")[number];
   var picture = document.getElementsByClassName("hobby_picture")[number];
-  
+
   picture.style.opacity = "0.3";
   text.style.visibility = "visible";
-  pictureBloc.addEventListener("mouseout", function(){
+  pictureBloc.addEventListener("mouseout", function () {
     text.style.visibility = "hidden";
     picture.style.opacity = "1";
   });
 }
 
 
-/*--FAIS DISPARAITRE LE TEXTE DES IMAGES LOISIR--*/
-/*function textDisappaer(number) {
-  var
-}*/
+/*--FAIS APPARAITRE/DISPARAITRE L'ADRESSE MAIL--*/
+var enveloppe = document.getElementById("envelope");
+var mail = document.getElementById("mail");
+
+enveloppe.addEventListener("click", function () {
+  if (mail.style.visibility == "visible") {
+    mail.style.visibility = "hidden";
+  } else {
+    mail.style.visibility = "visible";
+  }
+});

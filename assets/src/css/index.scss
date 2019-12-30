@@ -143,19 +143,18 @@ article {
 }
 
 #hobbies {
+    padding-bottom: 3em;
+
     #pictures {
         display: flex;
         justify-content: space-around;
         width: 100%;
+        margin-top: 1em;
 
         .picture_animation {
             img {
                 width: 15em;
             }
-
-            /*img:hover {
-                opacity: 0.4;
-            }*/
 
             p {
                 text-transform: uppercase;
@@ -179,7 +178,36 @@ article {
                 left: 25%;
             }
 
-
         }
     }
+}
+
+#contact {
+    #contact_categories {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+
+        .contact_category {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #envelope {
+            cursor: pointer;
+        }
+        
+        #mail {
+            visibility: hidden;
+        }
+
+        #find_logo {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
 }
