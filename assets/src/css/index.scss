@@ -157,45 +157,51 @@ article {
         width: 100%;
         margin-top: 1em;
 
-        .picture_animation {
-            img {
-                width: 15em;
-            }
+        .pictures_bloc {
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
 
-            p {
-                text-transform: uppercase;
-                font-weight: bold;
-                width: max-content;
-                position: relative;
-                bottom: 50%;
-                left: 30%;
-                visibility: hidden;
-            }
+            .picture_animation {
+                img {
+                    width: 15em;
+                }
 
-            #boardgame {
-                position: relative;
-                bottom: 50%;
-                left: 23%;
-            }
+                p {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    width: max-content;
+                    position: relative;
+                    bottom: 50%;
+                    left: 30%;
+                    visibility: hidden;
+                }
 
-            #jogging {
-                position: relative;
-                bottom: 50%;
-                left: 25%;
-            }
+                #boardgame {
+                    position: relative;
+                    bottom: 50%;
+                    left: 23%;
+                }
 
+                #jogging {
+                    position: relative;
+                    bottom: 50%;
+                    left: 25%;
+                }
+
+            }
         }
     }
 }
 
 #contact {
     #contact_categories {
-        width: 80%;
+        width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
         .contact_category {
-            width: 30%;
+            width: 33%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -265,6 +271,21 @@ article {
             }
         }
     }
+
+    #hobbies {
+        #pictures {
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: space-around;
+            width: 100%;
+
+            .pictures_bloc {
+                flex-wrap: wrap;
+                width: 100%;
+            }
+        }
+    }
+
 }
 
 
@@ -278,15 +299,18 @@ article {
             img {
                 width: 100%;
             }
+
             #about_text {
                 width: 90%;
             }
         }
     }
 
-    #schooling, #experience {
+    #schooling,
+    #experience {
         ul {
             width: 90%;
+
             li {
                 font-size: 0.8em;
             }
@@ -295,8 +319,9 @@ article {
 
     #achievement {
         h2 {
-            margin-bottom: 1em;
+            margin-bottom: 0;
         }
+
         #achievs {
             flex-direction: column;
             justify-content: space-between;
@@ -307,7 +332,19 @@ article {
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-around;
-                margin-top: 1em;
+                margin-top: 2em;
+            }
+        }
+    }
+
+    #contact {
+        #contact_categories {
+            .contact_category {
+                #find_logo {
+                    img {
+                        width: 80%;
+                    }
+                }
             }
         }
     }
@@ -317,16 +354,41 @@ article {
 @media(max-width: 576px) {
     #skills {
         h2 {
-            margin-bottom: 1em;;
+            margin-bottom: 1em;
+            ;
         }
+
         #list_skills {
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            
+
             .category {
                 width: 90%;
                 margin-top: 1em;
+            }
+        }
+    }
+
+    #contact {
+        margin-bottom: 1em;
+
+        #contact_categories {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .contact_category {
+                width: 100%;
+                margin-top: 1em;
+
+                #find_logo {
+                    justify-content: space-around;
+                    img {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
