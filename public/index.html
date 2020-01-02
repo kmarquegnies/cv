@@ -6,19 +6,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="assets/css/style.min.css">
-	<!--<link
-		href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|Roboto:300,300i,400,400i,500,500i,700&display=swap"
-		rel="stylesheet">-->
 	<title>CV Kévin Marquegnies</title>
 </head>
 
 <body>
+
+	<!-- HEADER -->
 	<header>
 		<div id="header_title">
 			<h1>cv kévin marquegnies</h1>
 			<h2>Développeur Web / Mobile Junior</h2>
 		</div>
+
+		<!-- MENUS -->
 		<nav>
+
+			<!-- MENU LARGE SCREEN -->
 			<ul id="menu">
 				<li><a href="#about">A propos</a></li>
 				<li><a href="#skills">Compétences</a></li>
@@ -29,6 +32,7 @@
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 
+			<!-- MENU RESPONSIVE -->
 			<div id="responsive_menu">
 				<i class="fas fa-bars" onclick="menuAppear()"></i>
 				<i class="fas fa-times" onclick="menuAppear()"></i>
@@ -36,7 +40,12 @@
 			</div>
 		</nav>
 	</header>
+	<!-- END HEADER -->
+
+	<!-- HOMEPAGE CONTENT -->
 	<section id="page_content">
+
+		<!-- ABOUT SECTION -->
 		<article id="about">
 			<h2 class="blue_back">à propos</h2>
 			<div id="photo_text">
@@ -53,9 +62,14 @@
 				</div>
 			</div>
 		</article>
+		<!-- END ABOUT SECTION -->
+
+		<!-- SKILLS SECTION -->
 		<article id="skills" class="blue_back">
 			<h2 class="white_back">compétences</h2>
 			<div id="list_skills">
+
+				<!-- FRONT END -->
 				<div class="category">
 					<h4>Front-End</h4>
 					<div class="logo">
@@ -73,6 +87,8 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- BACK END -->
 				<div class="category">
 					<h4>Back-End</h4>
 					<div class="logo">
@@ -90,6 +106,8 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- TOOLS -->
 				<div class="category">
 					<h4>Outils et environnement</h4>
 					<div class="logo">
@@ -109,6 +127,9 @@
 				</div>
 			</div>
 		</article>
+		<!-- END SKILLS SECTION -->
+
+		<!-- SCHOOLING SECTION -->
 		<article id="schooling">
 			<h2 class="blue_back">formations</h2>
 			<ul>
@@ -120,6 +141,9 @@
 				<li>> 2006 - 2009 : <strong>Baccalauréat Scientifique</strong> - Lycée de l’Escaut à Valenciennes</li>
 			</ul>
 		</article>
+		<!-- END SCHOOLING SECTION -->
+
+		<!-- EXPERIENCE SECTION -->
 		<article id="experience" class="blue_back">
 			<h2 class="white_back">expériences</h2>
 			<ul>
@@ -129,9 +153,13 @@
 				<li>> 2012 - 2013 : <strong>Agent de quai / Manutentionnaire</strong> - Envie 2E à Lesquin</li>
 			</ul>
 		</article>
+		<!-- END EXPERIENCE SECTION -->
+
+		<!-- ACHIEVEMENTS SECTION -->
 		<article id="achievement">
 			<h2 class="blue_back">réalisations</h2>
 			<div id="achievs">
+				<!-- NAHEULBEUK -->
 				<div id="naheulbeuk" class="project">
 					<div class="project_description">
 						<h4>Développement d'un générateur de personnage pour le jeu de rôle "Le donjon de Naheulbeuk"
@@ -140,6 +168,8 @@
 					</div>
 					<a href="download/naheulbeuk.rb" class="button">Télécharger</a>
 				</div>
+
+				<!-- RUN'ZIK -->
 				<div id="runzik" class="project">
 					<div class="project_description">
 						<h4>Maquettage et intégration de plusieurs pages pour la société fictive Run'Zik dans une projet
@@ -149,6 +179,8 @@
 					</div>
 					<a href="#" class="button">Visualiser</a>
 				</div>
+
+				<!-- SERV'DRONE -->
 				<div id="servdrone" class="project">
 					<div class="project_description">
 						<h4>Maquettage et intégration de plusieurs pages pour la société fictive Serv'Drone dans une
@@ -161,6 +193,9 @@
 				</div>
 			</div>
 		</article>
+		<!-- END ACHIEVEMENTS SECTION -->
+
+		<!-- HOBBIES SECTION -->
 		<article id="hobbies" class="blue_back">
 			<h2 class="white_back">loisirs</h2>
 			<div id="pictures">
@@ -187,14 +222,21 @@
 				</div>
 			</div>
 		</article>
+		<!-- END HOBBIES SECTION -->
+
+		<!-- CONTACTS SECTION -->
 		<article id="contact">
 			<h2 class="blue_back">contact</h2>
 			<div id="contact_categories">
+
+				<!-- CONTACT ME -->
 				<div id="contact_me" class="contact_category">
 					<h4>Contactez moi</h4>
 					<img src="assets/src/images/mail.svg" alt="enveloppe" id="envelope" />
 					<a href="mailto:kevin.marquegnies@gmail.com" id="mail">kevin.marquegnies@gmail.com</a>
 				</div>
+
+				<!-- FIND ME -->
 				<div id="find_me" class="contact_category">
 					<h4>Retrouvez moi sur</h4>
 					<div id="find_logo">
@@ -204,6 +246,8 @@
 								alt="logo de framagit" /></a>
 					</div>
 				</div>
+
+				<!-- DOWNLOAD CV -->
 				<div id="download" class="contact_category">
 					<h4>Téléchargez mon CV</h4>
 					<a href="download/cv.pdf" target="_blank"><img src="assets/src/images/cv.svg"
@@ -211,11 +255,18 @@
 				</div>
 			</div>
 		</article>
+		<!-- END CONTACTS SECTION -->
+
 	</section>
+	<!-- END HOMEPAGE CONTENT -->
+
+	<!-- FOOTER -->
 	<footer>
 		<p>© 2020 Marquegnies Kévin. Tous droits réservés.</p>
 		<a href="#">Mentions légales</a>
 	</footer>
+	<!-- END FOOTER -->
+
 	<a href="#"><i class="fas fa-chevron-circle-up"></i></a>
 	<script src="assets/js/script.min.js"></script>
 </body>

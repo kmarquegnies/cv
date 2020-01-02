@@ -1,6 +1,4 @@
-html {
-    scroll-behavior: smooth;
-}
+/* -- GENERAL -- */
 
 body {
     margin: 0;
@@ -9,6 +7,18 @@ body {
     flex-direction: column;
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+
+/* -- TITLES */
 
 h1 {
     font-size: 1.5em;
@@ -20,33 +30,38 @@ h2 {
 }
 
 
-h1,h2,h4 {
+h1,
+h2,
+h4 {
     font-family: 'Raleway', sans-serif;
 }
 
-ul {
-    list-style-type: none;
-}
+
+/* -- LINKS -- */
 
 a {
     text-decoration: none;
     color: white;
 }
 
+
 a:hover {
     color: #808782;
 }
 
+
+/* -- BUTTONS -- */
+
 .button {
-    color: black;
-    background-color: #BE6E46;
+    color:white;
+    background-color: #808782;
     padding: 1em;
     border-radius: 1em;
     align-self: center;
     margin-top: 1em;
 }
 
-.button:hover {
-    color: white;
-}
 
+.button:hover {
+    color: black;
+}
