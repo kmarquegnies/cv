@@ -74,3 +74,4 @@ function menuAppear() {
     responsiveMenu.style.display = "block";
   }
 }
+
