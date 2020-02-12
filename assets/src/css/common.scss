@@ -1,0 +1,68 @@
+/* -- GENERAL -- */
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #FAF9F9;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+
+/* -- TITLES */
+
+h1 {
+    font-size: 1.5em;
+}
+
+
+h2 {
+    font-size: 1.2em;
+}
+
+
+h1,
+h2,
+h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* -- LINKS -- */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+a:hover {
+    color: #808782;
+}
+
+
+/* -- BUTTONS -- */
+
+.button {
+    color:white;
+    background-color: #808782;
+    padding: 1em;
+    border-radius: 1em;
+    align-self: center;
+    margin-top: 1em;
+}
+
+
+.button:hover {
+    color: black;
+}
