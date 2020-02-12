@@ -1,0 +1,428 @@
+/* -- GENERAL CONTENT -- */
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 6em;
+    padding-top: 4em;
+
+    h2 {
+        padding: 1em 1.5em;
+        border-radius: 0.8em;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 2em;
+        margin-top: 2em;
+    }
+
+    h4 {
+        margin-bottom: 2em;
+    }
+}
+
+.blue_back {
+    background-color: #C0D6DF;
+
+}
+
+.white_back {
+    background-color: white;
+}
+
+
+/* -- ABOUT SECTION -- */
+
+#photo_text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+        width: 25em;
+    }
+
+    #about_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+    }
+}
+
+
+/* -- SKILLS SECTION -- */
+
+#skills {
+
+    #list_skills {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 0;
+
+
+        .category {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo {
+                display: flex;
+                width: 90%;
+                justify-content: space-between;
+
+                .logo_title {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-bottom: 0;
+                }
+
+                p {
+                    margin-bottom: 0;
+                    margin-top: 0.5em;
+                }
+
+                img {
+                    height: 80%;
+                    z-index: 500;
+                }
+
+                img:hover {
+                    animation: bounce 0.35s ease infinite alternate;
+
+
+                    @keyframes bounce {
+                        from {
+                            transform: translateY(0);
+                        }
+
+                        to {
+                            transform: translateY(-20px);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+/* -- SCHOOLING AND EXPERIENCE SECTIONS -- */
+
+#schooling,
+#experience {
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            margin-top: 3em;
+        }
+    }
+}
+
+
+/* -- ACHIEVEMENTS SECTION -- */
+
+#achievement {
+
+    #achievs {
+        display: flex;
+        justify-content: space-around;
+
+        .project {
+            width: 18%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            ;
+
+            p {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+
+/* -- HOBBIES SECTION -- */
+
+#hobbies {
+    padding-bottom: 3em;
+
+    #pictures {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 1em;
+
+        .pictures_bloc {
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+
+            .picture_animation {
+                img {
+                    width: 15em;
+                }
+
+                p {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    width: max-content;
+                    position: relative;
+                    bottom: 50%;
+                    left: 30%;
+                    visibility: hidden;
+                }
+
+                #boardgame {
+                    position: relative;
+                    bottom: 50%;
+                    left: 23%;
+                }
+
+                #jogging {
+                    position: relative;
+                    bottom: 50%;
+                    left: 25%;
+                }
+
+            }
+        }
+    }
+}
+
+
+/* -- CONTACT SECTION -- */
+
+#contact {
+    #contact_categories {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .contact_category {
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img:hover {
+                animation: bounce 0.35s ease infinite alternate;
+
+
+                @keyframes bounce {
+                    from {
+                        transform: translateY(0);
+                    }
+
+                    to {
+                        transform: translateY(-20px);
+                    }
+                }
+            }
+
+            #envelope {
+                cursor: pointer;
+            }
+
+            #mail {
+                visibility: hidden;
+                color: black;
+            }
+
+            #mail:hover {
+                color: #808782;
+            }
+
+            #find_logo {
+                width: 70%;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+}
+
+
+/* UP CHEVRON */
+
+.fa-chevron-circle-up {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    font-size: 2em;
+    z-index: 9999;
+    color: black;
+    visibility: hidden;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 1100px) {
+    #skills {
+        #list_skills {
+            .category {
+                .logo {
+                    height: 80%;
+
+                    .logo_title {
+                        img {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hobbies {
+        #pictures {
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: space-around;
+            width: 100%;
+
+            .pictures_bloc {
+                flex-wrap: wrap;
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+
+@media(max-width: 768px) {
+    #about {
+        #photo_text {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+            }
+
+            #about_text {
+                width: 90%;
+            }
+        }
+    }
+
+    #skills {
+        h2 {
+            padding-bottom: 1em;
+            ;
+        }
+
+        #list_skills {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .category {
+                width: 90%;
+                padding-top: 1em;
+                padding-bottom: 2em;
+
+                .logo {
+                    justify-content: space-around;
+                }
+            }
+        }
+    }
+
+    #schooling,
+    #experience {
+        ul {
+            width: 90%;
+
+            li {
+                font-size: 0.8em;
+            }
+        }
+    }
+
+    #achievement {
+        h2 {
+            margin-bottom: 0;
+        }
+
+        #achievs {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .project {
+                width: 100%;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                margin-top: 2em;
+
+                .project_description {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    #contact {
+        #contact_categories {
+            .contact_category {
+                #find_logo {
+                    img {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 576px) {
+    #contact {
+        margin-bottom: 1em;
+
+        #contact_categories {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .contact_category {
+                width: 100%;
+                margin-top: 1em;
+
+                #find_logo {
+                    justify-content: space-around;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
