@@ -284,7 +284,9 @@ article {
     visibility: hidden;
 }
 
-
+.overflow {
+    overflow: hidden;
+}
 /* RESPONSIVE DESIGN */
 
 @media(max-width: 1100px) {
