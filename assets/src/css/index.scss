@@ -187,6 +187,7 @@ article {
             .picture_animation {
                 img {
                     width: 15em;
+                    transition: opacity 1s;
                 }
 
                 p {
@@ -197,6 +198,7 @@ article {
                     bottom: 50%;
                     left: 30%;
                     visibility: hidden;
+                    transition: visibility 0.4s;
                 }
 
                 #boardgame {
@@ -278,11 +280,13 @@ article {
     right: 1em;
     font-size: 2em;
     z-index: 9999;
-    color: black;
+    color: #337357;
     visibility: hidden;
 }
 
-
+.overflow {
+    overflow: hidden;
+}
 /* RESPONSIVE DESIGN */
 
 @media(max-width: 1100px) {

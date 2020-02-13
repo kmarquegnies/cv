@@ -10,6 +10,9 @@ var fixe = menu.offsetTop;
 //Récupère l'icône chevron-haut dans une variable
 var topScroll = document.getElementsByClassName("fa-chevron-circle-up")[0];
 
+//Récupère la section about dans une variable
+var aboutSection = document.getElementById("about");
+
 /*Si la position offset de la page est supérieure ou 
 égale à la position offset du menu alors le menu 
 obtient la classe fixed qui le rend fixe et 
@@ -19,26 +22,36 @@ window.addEventListener("scroll", function () {
   if (window.pageYOffset >= fixe) {
     menu.classList.add("fixed");
     topScroll.style.visibility = "visible";
+    aboutSection.style.paddingTop = "calc(4em + 51px)"
   } else {
     menu.classList.remove("fixed");
     topScroll.style.visibility = "hidden";
+    aboutSection.style.paddingTop = "4em"
   }
 });
 
 
 /*--FAIS APPARAITRE/DISPARAITRE LE TEXTE DES IMAGES LOISIR--*/
-function textAppear(number) {
-  var text = document.getElementsByClassName("picture_text")[number];
-  var pictureBloc = document.getElementsByClassName("picture_animation")[number];
-  var picture = document.getElementsByClassName("hobby_picture")[number];
+var pictureBloc = document.getElementsByClassName("picture_animation");
 
-  picture.style.opacity = "0.3";
-  text.style.visibility = "visible";
-  pictureBloc.addEventListener("mouseout", function () {
-    text.style.visibility = "hidden";
-    picture.style.opacity = "1";
-  });
+function showDetails() {
+  this.firstElementChild.style.opacity = "0.3";
+  this.lastElementChild.style.visibility = "visible";
 }
+
+function hideDetails() {
+  this.firstElementChild.style.opacity = "1";
+  this.lastElementChild.style.visibility = "hidden";
+}
+
+for (var i = 0; i < pictureBloc.length; i++) {
+  pictureBloc[i].addEventListener('mouseover', showDetails);
+}
+
+for (var i = 0; i < pictureBloc.length; i++) {
+  pictureBloc[i].addEventListener('mouseout', hideDetails);
+}
+
 
 
 /*--FAIS APPARAITRE/DISPARAITRE L'ADRESSE MAIL--*/
@@ -75,7 +88,7 @@ function menuAppear() {
   }
 }
 
-
+/*--FAIS APPARAITRE LE NOM DES COMPETENCES AU SURVOL--*/
 $(".skill_img").mouseover(function () {
   var langageName = $(this).parent().children(".skill_name");
   langageName.css("visibility", "visible");
@@ -85,3 +98,5 @@ $(".skill_img").mouseout(function () {
   var langageName = $(this).parent().children(".skill_name");
   langageName.css("visibility", "hidden");
 })
+
+

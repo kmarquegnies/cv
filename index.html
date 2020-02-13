@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" href="assets/css/style.min.css">
 	<title>CV Kévin Marquegnies</title>
 </head>
@@ -46,31 +47,33 @@
 	<section id="page_content">
 
 		<!-- ABOUT SECTION -->
-		<article id="about">
+		<article id="about" class='overflow'>
 			<h2 class="blue_back">à propos</h2>
 			<div id="photo_text">
 				<img src="assets/images/profile.jpg" alt="Photo de profil de Kévin Marquegnies" />
 				<div id="about_text">
-					<p>En pleine reconversion professionnelle, je me suis tourné vers un domaine qui m'intéresse depuis
+					<p>En reconversion professionnelle, je me suis tourné vers un domaine qui m'intéresse depuis
 						plusieurs
-						années et actuellement je suis une formation de développeur Web et d'applications mobile au sein
+						années. Actuellement en formation intensive de développeur Web et d'applications mobile au sein
 						de la
-						fabrique Pop School Valenciennes.</p>
-					<p>Ayant commencé par de l'autoformation, c'est pour moi une chance de suivre cette formation et
-						d'améliorer
-						mes compétences au quotidien pour ensuite trouver un poste qui me correspond.</p>
+						fabrique Pop School Valenciennes j'acquiers de nouvelles compétences au quotidien.</p>
+					<p>Ayant commencé par de l'autoformation qui m'a appris les bases du développement front-end et
+						back-end, la
+						formation me permet d'approfondir ces connaissances en
+						réalisant des projets de groupe et individuels.</p>
 				</div>
 			</div>
 		</article>
 		<!-- END ABOUT SECTION -->
 
 		<!-- SKILLS SECTION -->
-		<article id="skills" class="blue_back">
+		<article id="skills" class="blue_back overflow">
 			<h2 class="white_back">compétences</h2>
 			<div id="list_skills">
 
 				<!-- FRONT END -->
-				<div class="category">
+				<div class="category" data-aos="slide-right" data-aos-once="true" data-aos-duration="1000"
+					data-aos-easing="ease">
 					<h3>Front-End</h3>
 					<div class="logo">
 						<div id="html" class="logo_title">
@@ -97,54 +100,56 @@
 				</div>
 
 				<!-- BACK END -->
-				<div class="category">
+				<div class="category" data-aos="slide-left" data-aos-once="true" data-aos-duration="1000"
+					data-aos-easing="ease">
 					<h3>Back-End</h3>
 					<div class="logo">
 						<div id="ruby" class="logo_title">
-							<img class="skill_img"src="assets/src/images/ruby.svg" alt="logo de ruby">
+							<img class="skill_img" src="assets/src/images/ruby.svg" alt="logo de ruby">
 							<p class="skill_name">Ruby</p>
 						</div>
 						<div id="rails" class="logo_title">
-							<img class="skill_img"src="assets/src/images/rails.svg" alt="logo de ruby on rails">
+							<img class="skill_img" src="assets/src/images/rails.svg" alt="logo de ruby on rails">
 							<p class="skill_name">Ruby on Rails</p>
 						</div>
 						<div id="php" class="logo_title">
-							<img class="skill_img"src="assets/src/images/php.svg" alt="logo de PHP" />
+							<img class="skill_img" src="assets/src/images/php.svg" alt="logo de PHP" />
 							<p class="skill_name">PHP</p>
 						</div>
 						<div id="laravel" class="logo_title">
-							<img class="skill_img"src="assets/src/images/laravel.svg" alt="logo de laravel">
+							<img class="skill_img" src="assets/src/images/laravel.svg" alt="logo de laravel">
 							<p class="skill_name">Laravel</p>
 						</div>
 						<div id="node" class="logo_title">
-							<img class="skill_img"src="assets/src/images/node.svg" alt="logo de node JS">
+							<img class="skill_img" src="assets/src/images/node.svg" alt="logo de node JS">
 							<p class="skill_name">Node JS</p>
 						</div>
 						<div id="mysql" class="logo_title">
-							<img class="skill_img"src="assets/src/images/mysql.svg" alt="logo de mysql">
+							<img class="skill_img" src="assets/src/images/mysql.svg" alt="logo de mysql">
 							<p class="skill_name">MySQL</p>
 						</div>
 					</div>
 				</div>
 
 				<!-- TOOLS -->
-				<div class="category">
+				<div class="category" data-aos="slide-right" data-aos-once="true" data-aos-duration="1000"
+					data-aos-easing="ease">
 					<h3>Outils et environnement</h3>
 					<div class="logo">
 						<div id="git" class="logo_title">
-							<img class="skill_img"src="assets/src/images/git.svg" alt="logo de Git" />
+							<img class="skill_img" src="assets/src/images/git.svg" alt="logo de Git" />
 							<p class="skill_name">Git</p>
 						</div>
 						<div id="trello" class="logo_title">
-							<img class="skill_img"src="assets/src/images/trello.svg" alt="logo de trello">
+							<img class="skill_img" src="assets/src/images/trello.svg" alt="logo de trello">
 							<p class="skill_name">Trello</p>
 						</div>
 						<div id="framagit" class="logo_title">
-							<img class="skill_img"src="assets/src/images/gitlab.svg" alt="logo de framagit">
+							<img class="skill_img" src="assets/src/images/gitlab.svg" alt="logo de framagit">
 							<p class="skill_name">Gitlab</p>
 						</div>
 						<div id="figma" class="logo_title">
-							<img class="skill_img"src="assets/src/images/figma.svg" alt="logo de figma">
+							<img class="skill_img" src="assets/src/images/figma.svg" alt="logo de figma">
 							<p class="skill_name">Figma</p>
 						</div>
 					</div>
@@ -154,9 +159,9 @@
 		<!-- END SKILLS SECTION -->
 
 		<!-- SCHOOLING SECTION -->
-		<article id="schooling">
+		<article id="schooling" class='overflow'>
 			<h2 class="blue_back">formations</h2>
-			<ul>
+			<ul data-aos="slide-left" data-aos-once="true" data-aos-duration="1000" data-aos-easing="ease">
 				<li>> Depuis novembre 2019 : <strong>Développeur Web et d’applications mobile</strong> - Fabrique
 					Popschool à
 					Valenciennes</li>
@@ -168,9 +173,9 @@
 		<!-- END SCHOOLING SECTION -->
 
 		<!-- EXPERIENCE SECTION -->
-		<article id="experience" class="blue_back">
+		<article id="experience" class="blue_back overflow">
 			<h2 class="white_back">expériences</h2>
-			<ul>
+			<ul data-aos="slide-right" data-aos-once="true" data-aos-duration="1000" data-aos-easing="ease">
 				<li>> 2013 - 2019 : <strong>Adjoint de sécurité</strong> - Brigade Economique et Financière, Hôtel de
 					Police de
 					Lille</li>
@@ -180,9 +185,10 @@
 		<!-- END EXPERIENCE SECTION -->
 
 		<!-- ACHIEVEMENTS SECTION -->
-		<article id="achievement">
+		<article id="achievement" class="overflow">
 			<h2 class="blue_back">réalisations</h2>
-			<div id="achievs">
+			<div id="achievs" data-aos="slide-left" data-aos-once="true" data-aos-duration="1000"
+				data-aos-easing="ease">
 				<!-- NAHEULBEUK -->
 				<div id="naheulbeuk" class="project">
 					<div class="project_description">
@@ -220,26 +226,27 @@
 		<!-- END ACHIEVEMENTS SECTION -->
 
 		<!-- HOBBIES SECTION -->
-		<article id="hobbies" class="blue_back">
+		<article id="hobbies" class="blue_back overflow">
 			<h2 class="white_back">loisirs</h2>
-			<div id="pictures">
+			<div id="pictures" data-aos="slide-right" data-aos-once="true" data-aos-duration="1000"
+				data-aos-easing="ease">
 				<div class="pictures_bloc">
-					<div class="picture_animation" onmouseover="textAppear(0)">
+					<div class="picture_animation">
 						<img src="assets/images/rpg.jpg" alt="jeu de rôle papier" class="hobby_picture" />
 						<p class="picture_text">Jeux de rôle</p>
 					</div>
-					<div class="picture_animation" onmouseover="textAppear(1)">
+					<div class="picture_animation">
 						<img src="assets/images/videogames.jpg" alt="manette de ps4 tenue devant un écran"
 							class="hobby_picture" />
 						<p class="picture_text">Jeux vidéos</p>
 					</div>
 				</div>
 				<div class="pictures_bloc">
-					<div class="picture_animation" onmouseover="textAppear(2)">
+					<div class="picture_animation">
 						<img src="assets/images/jds.jpg" alt="plateau de jeu d'échec" class="hobby_picture" />
 						<p class="picture_text" id="boardgame">Jeux de société</p>
 					</div>
-					<div class="picture_animation" onmouseover="textAppear(3)">
+					<div class="picture_animation">
 						<img src="assets/images/jogging.jpg" alt="homme faisant son jogging" class="hobby_picture" />
 						<p class="picture_text" id="jogging">Course à pied</p>
 					</div>
@@ -249,9 +256,10 @@
 		<!-- END HOBBIES SECTION -->
 
 		<!-- CONTACTS SECTION -->
-		<article id="contact">
+		<article id="contact" class="overflow">
 			<h2 class="blue_back">contact</h2>
-			<div id="contact_categories">
+			<div id="contact_categories" data-aos="slide-left" data-aos-once="true" data-aos-duration="1000"
+				data-aos-easing="ease">
 
 				<!-- CONTACT ME -->
 				<div id="contact_me" class="contact_category">
@@ -287,13 +295,17 @@
 	<!-- FOOTER -->
 	<footer>
 		<p>© 2020 Marquegnies Kévin. Tous droits réservés.</p>
-		<a href="#">Mentions légales</a>
+		<!-- <a href="#">Mentions légales</a> -->
 	</footer>
 	<!-- END FOOTER -->
 
 	<a href="#"><i class="fas fa-chevron-circle-up"></i></a>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="assets/js/script.min.js"></script>
 </body>
 
