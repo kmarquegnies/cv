@@ -12,7 +12,7 @@ var topScroll = document.getElementsByClassName("fa-chevron-circle-up")[0];
 
 //Récupère la section about dans une variable
 var aboutSection = document.getElementById("about");
-
+var legalSection = document.getElementById("legal_page");
 /*Si la position offset de la page est supérieure ou 
 égale à la position offset du menu alors le menu 
 obtient la classe fixed qui le rend fixe et 
@@ -22,15 +22,23 @@ window.addEventListener("scroll", function () {
   if (window.pageYOffset >= fixe) {
     menu.classList.add("fixed");
     topScroll.style.visibility = "visible";
-    aboutSection.style.paddingTop = "calc(4em + 51px)"
+    if (document.getElementById("page_content") != null) {
+      aboutSection.style.paddingTop = "calc(4em + 51px)";
+    } else {
+      legalSection.style.paddingTop = "calc(4em + 51px)";
+    }
   } else {
     menu.classList.remove("fixed");
     topScroll.style.visibility = "hidden";
-    aboutSection.style.paddingTop = "4em"
+    if (document.getElementById("page_content") != null) {
+      aboutSection.style.paddingTop = "4em";
+    } else {
+      legalSection.style.paddingTop = "4em";
+    }
   }
 });
 
-
+if (document.getElementById("page_content") != null) {
 /*--FAIS APPARAITRE/DISPARAITRE LE TEXTE DES IMAGES LOISIR--*/
 var pictureBloc = document.getElementsByClassName("picture_animation");
 
@@ -67,6 +75,19 @@ enveloppe.addEventListener("click", function () {
 });
 
 
+/*--FAIS APPARAITRE LE NOM DES COMPETENCES AU SURVOL--*/
+$(".skill_img").mouseover(function () {
+  var langageName = $(this).parent().children(".skill_name");
+  langageName.css("visibility", "visible");
+})
+
+$(".skill_img").mouseout(function () {
+  var langageName = $(this).parent().children(".skill_name");
+  langageName.css("visibility", "hidden");
+})
+
+}
+
 /*--FAIS APPARAITRE LE MENU EN RESPONSIVE--*/
 var contentMenu = document.getElementById("menu").innerHTML;
 var responsiveMenu = document.getElementById("list_menu");
@@ -87,16 +108,3 @@ function menuAppear() {
     responsiveMenu.style.display = "block";
   }
 }
-
-/*--FAIS APPARAITRE LE NOM DES COMPETENCES AU SURVOL--*/
-$(".skill_img").mouseover(function () {
-  var langageName = $(this).parent().children(".skill_name");
-  langageName.css("visibility", "visible");
-})
-
-$(".skill_img").mouseout(function () {
-  var langageName = $(this).parent().children(".skill_name");
-  langageName.css("visibility", "hidden");
-})
-
-
