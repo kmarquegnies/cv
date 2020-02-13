@@ -27,18 +27,26 @@ window.addEventListener("scroll", function () {
 
 
 /*--FAIS APPARAITRE/DISPARAITRE LE TEXTE DES IMAGES LOISIR--*/
-function textAppear(number) {
-  var text = document.getElementsByClassName("picture_text")[number];
-  var pictureBloc = document.getElementsByClassName("picture_animation")[number];
-  var picture = document.getElementsByClassName("hobby_picture")[number];
+var pictureBloc = document.getElementsByClassName("picture_animation");
 
-  picture.style.opacity = "0.3";
-  text.style.visibility = "visible";
-  pictureBloc.addEventListener("mouseout", function () {
-    text.style.visibility = "hidden";
-    picture.style.opacity = "1";
-  });
+function showDetails() {
+  this.firstElementChild.style.opacity = "0.3";
+  this.lastElementChild.style.visibility = "visible";
 }
+
+function hideDetails() {
+  this.firstElementChild.style.opacity = "1";
+  this.lastElementChild.style.visibility = "hidden";
+}
+
+for (var i = 0; i < pictureBloc.length; i++) {
+  pictureBloc[i].addEventListener('mouseover', showDetails);
+}
+
+for (var i = 0; i < pictureBloc.length; i++) {
+  pictureBloc[i].addEventListener('mouseout', hideDetails);
+}
+
 
 
 /*--FAIS APPARAITRE/DISPARAITRE L'ADRESSE MAIL--*/
@@ -75,7 +83,7 @@ function menuAppear() {
   }
 }
 
-
+/*--FAIS APPARAITRE LE NOM DES COMPETENCES AU SURVOL--*/
 $(".skill_img").mouseover(function () {
   var langageName = $(this).parent().children(".skill_name");
   langageName.css("visibility", "visible");
