@@ -187,6 +187,7 @@ article {
             .picture_animation {
                 img {
                     width: 15em;
+                    transition: opacity 1s;
                 }
 
                 p {
@@ -197,6 +198,7 @@ article {
                     bottom: 50%;
                     left: 30%;
                     visibility: hidden;
+                    transition: visibility 0.4s;
                 }
 
                 #boardgame {
