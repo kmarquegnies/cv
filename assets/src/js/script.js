@@ -75,3 +75,13 @@ function menuAppear() {
   }
 }
 
+
+$(".skill_img").mouseover(function () {
+  var langageName = $(this).parent().children(".skill_name");
+  langageName.css("visibility", "visible");
+})
+
+$(".skill_img").mouseout(function () {
+  var langageName = $(this).parent().children(".skill_name");
+  langageName.css("visibility", "hidden");
+})
