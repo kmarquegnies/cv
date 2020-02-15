@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAY,CACR,WAAW,CAAE,GAAG,CAEhB,cAAG,CACC,UAAU,CAAE,MAAM,CAClB,UAAU,CAAE,GAAG,CAGnB,uBAAY,CACR,MAAM,CAAE,GAAG",
+"sources": ["../src/css/legal.scss"],
+"names": [],
+"file": "legal.min.css"
+}
