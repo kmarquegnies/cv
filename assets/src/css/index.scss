@@ -158,42 +158,33 @@ article {
             height: 10em;
             position: relative;
             margin: 2em;
-            transition: 0.5s ease;
 
             img {
                 object-fit: cover;
                 width: 100%;
                 height: 100%;
                 box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-
+                
             }
 
 
 
             .achiev_text {
+                opacity: 0;
                 position: absolute;
                 top: 0;
                 height: 10em;
                 width: 100%;
                 text-align: center;
                 display: flex;
-
+                transition: all ease 0.8s;
+                background-color: black;
 
                 p {
                     font-size: 0.9em;
                     width: 80%;
                     margin: auto;
-                }
-            }
-        }
-
-        .project_description:hover {
-            transform: scale(1.1);
-            transition: 0.5s ease;
-
-            .achiev_text {
-                p {
-                    visibility: visible;
+                    color: white;
                 }
             }
         }
