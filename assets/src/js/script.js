@@ -38,6 +38,55 @@ window.addEventListener("scroll", function () {
   }
 });
 
+
+// $(".overflow").mouseenter(function(event) {
+//   console.log(this);
+//   console.log($(this));
+// $(".nav_button").mouseover(function() {
+//   var button = $(this).attr("href");
+//   var buttonPosition = $(button).offset().top;
+//   var nextButtonPosition = $(button).next().offset().top;
+//   var scroll = $(document).scrollTop();
+//   // var buttonPositionb = buttonPosition + button.height();
+//   console.log(buttonPosition);
+//   console.log(scroll)
+//   console.log(nextButtonPosition);
+//   // console.log(buttonPosition + $(button).height())
+
+//   if(nextButtonPosition >= scroll && scroll >= buttonPosition) {
+//     $(this).css("color", "red");
+//   } else {
+//     $(this).css("color", "white");
+//   }
+// })
+// console.log(event.target)
+// })
+
+$(window).scroll(function () {
+  var tab = $(".overflow");
+  // console.log(tab)
+  console.log($(document).scrollTop());
+  for (var i = 0; i < tab.length; i++) {
+    // console.log(i);
+    // console.log(tab[i]);
+    // console.log(tab.eq(i));
+    var id = tab.eq(i).attr("id");
+    
+    if(i < tab.length-1) {
+    // console.log(tab.eq(i).offset().top);
+    // console.log(tab.eq(i+1).offset().top);
+    if($(document).scrollTop() >= tab.eq(i).offset().top && $(document).scrollTop() <= tab.eq(i+1).offset().top) {
+      console.log($("a[href='#" + id +"']").css("color", "red"));
+    } else {
+      console.log($("a[href='#" + id +"']").css("color", "white"));
+    }
+    } else {
+      // console.log(tab.eq(i).offset().top);
+    }
+    
+  }
+})
+
 if (document.getElementById("page_content") != null) {
   /*--FAIS APPARAITRE/DISPARAITRE LE TEXTE DES IMAGES LOISIR--*/
   var pictureBloc = document.getElementsByClassName("picture_animation");
