@@ -153,20 +153,44 @@ article {
         justify-content: center;
         flex-wrap: wrap;
 
-        .project {
-            width: 18%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-between;
-            margin: 2em 3em;
+        .project_description {
+            width: 20em;
+            height: 10em;
+            position: relative;
+            margin: 2em;
 
-            p {
-                margin-top: 0;
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+
+            }
+
+
+
+            .achiev_text {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                height: 10em;
+                width: 100%;
+                text-align: center;
+                display: flex;
+                transition: all ease 0.8s;
+                background-color: black;
+
+                p {
+                    font-size: 0.9em;
+                    width: 80%;
+                    margin: auto;
+                    color: white;
+                }
             }
         }
     }
 }
+
 
 
 /* -- HOBBIES SECTION -- */
@@ -186,34 +210,33 @@ article {
             width: 50%;
 
             .picture_animation {
+                position: relative;
+
                 img {
                     width: 15em;
-                    transition: opacity 1s;
+
                 }
 
-                p {
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    width: max-content;
-                    position: relative;
-                    bottom: 50%;
-                    left: 30%;
-                    visibility: hidden;
-                    transition: visibility 0.4s;
-                }
+                .text_bloc {
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    display: flex;
+                    transition: all ease 0.8s;
+                    background-color: black;
 
-                #boardgame {
-                    position: relative;
-                    bottom: 50%;
-                    left: 23%;
+                    p {
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        font-size: 0.9em;
+                        width: 80%;
+                        margin: auto;
+                        color: white;
+                    }
                 }
-
-                #jogging {
-                    position: relative;
-                    bottom: 50%;
-                    left: 25%;
-                }
-
             }
         }
     }
@@ -349,18 +372,6 @@ article {
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-
-            .project {
-                width: 100%;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-around;
-                margin: 2em 0;
-
-                .project_description {
-                    width: 50%;
-                }
-            }
         }
     }
 
@@ -379,6 +390,14 @@ article {
 
 
 @media(max-width: 576px) {
+    #achievement {
+        #achievs {
+            .project_description {
+                width: 18em;
+            }
+        }
+    }
+
     #contact {
         margin-bottom: 1em;
 

@@ -39,52 +39,63 @@ window.addEventListener("scroll", function () {
 });
 
 if (document.getElementById("page_content") != null) {
-/*--FAIS APPARAITRE/DISPARAITRE LE TEXTE DES IMAGES LOISIR--*/
-var pictureBloc = document.getElementsByClassName("picture_animation");
+  /*--FAIS APPARAITRE/DISPARAITRE LE TEXTE DES IMAGES LOISIR--*/
+  var pictureBloc = document.getElementsByClassName("picture_animation");
 
-function showDetails() {
-  this.firstElementChild.style.opacity = "0.3";
-  this.lastElementChild.style.visibility = "visible";
-}
-
-function hideDetails() {
-  this.firstElementChild.style.opacity = "1";
-  this.lastElementChild.style.visibility = "hidden";
-}
-
-for (var i = 0; i < pictureBloc.length; i++) {
-  pictureBloc[i].addEventListener('mouseover', showDetails);
-}
-
-for (var i = 0; i < pictureBloc.length; i++) {
-  pictureBloc[i].addEventListener('mouseout', hideDetails);
-}
-
-
-
-/*--FAIS APPARAITRE/DISPARAITRE L'ADRESSE MAIL--*/
-var enveloppe = document.getElementById("envelope");
-var mail = document.getElementById("mail");
-
-enveloppe.addEventListener("click", function () {
-  if (mail.style.visibility == "visible") {
-    mail.style.visibility = "hidden";
-  } else {
-    mail.style.visibility = "visible";
+  function showDetails() {
+    this.lastElementChild.style.opacity = "0.9";
   }
-});
+
+  function hideDetails() {
+    this.lastElementChild.style.opacity = "0";
+  }
+
+  for (var i = 0; i < pictureBloc.length; i++) {
+    pictureBloc[i].addEventListener('mouseenter', showDetails);
+  }
+
+  for (var i = 0; i < pictureBloc.length; i++) {
+    pictureBloc[i].addEventListener('mouseleave', hideDetails);
+  }
 
 
-/*--FAIS APPARAITRE LE NOM DES COMPETENCES AU SURVOL--*/
-$(".skill_img").mouseover(function () {
-  var langageName = $(this).parent().children(".skill_name");
-  langageName.css("visibility", "visible");
-})
+  /*--FAIS APPARAITRE/DISPARAITRE LE TEXTE DES IMAGES REALISATIONS--*/
+  $(".project_description").mouseenter(function () {
+    $(this).children(".achiev_text").css({
+      "opacity": "0.9"
+    });
+  })
 
-$(".skill_img").mouseout(function () {
-  var langageName = $(this).parent().children(".skill_name");
-  langageName.css("visibility", "hidden");
-})
+  $(".project_description").mouseleave(function () {
+    $(this).children(".achiev_text").css({
+      "opacity": "0"
+    });
+  })
+
+
+  /*--FAIS APPARAITRE/DISPARAITRE L'ADRESSE MAIL--*/
+  var enveloppe = document.getElementById("envelope");
+  var mail = document.getElementById("mail");
+
+  enveloppe.addEventListener("click", function () {
+    if (mail.style.visibility == "visible") {
+      mail.style.visibility = "hidden";
+    } else {
+      mail.style.visibility = "visible";
+    }
+  });
+
+
+  /*--FAIS APPARAITRE LE NOM DES COMPETENCES AU SURVOL--*/
+  $(".skill_img").mouseover(function () {
+    var langageName = $(this).parent().children(".skill_name");
+    langageName.css("visibility", "visible");
+  })
+
+  $(".skill_img").mouseout(function () {
+    var langageName = $(this).parent().children(".skill_name");
+    langageName.css("visibility", "hidden");
+  })
 
 }
 
