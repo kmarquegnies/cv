@@ -391,6 +391,14 @@ article {
 
 
                     @media(max-width: 576px) {
+                        #achievement {
+                            #achievs {
+                                .project_description {
+                                    width: 18em;
+                                }
+                            }
+                        }
+
                         #contact {
                             margin-bottom: 1em;
 
