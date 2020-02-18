@@ -43,21 +43,19 @@ if (document.getElementById("page_content") != null) {
   var pictureBloc = document.getElementsByClassName("picture_animation");
 
   function showDetails() {
-    this.firstElementChild.style.opacity = "0.3";
-    this.lastElementChild.style.visibility = "visible";
+    this.lastElementChild.style.opacity = "0.9";
   }
 
   function hideDetails() {
-    this.firstElementChild.style.opacity = "1";
-    this.lastElementChild.style.visibility = "hidden";
+    this.lastElementChild.style.opacity = "0";
   }
 
   for (var i = 0; i < pictureBloc.length; i++) {
-    pictureBloc[i].addEventListener('mouseover', showDetails);
+    pictureBloc[i].addEventListener('mouseenter', showDetails);
   }
 
   for (var i = 0; i < pictureBloc.length; i++) {
-    pictureBloc[i].addEventListener('mouseout', hideDetails);
+    pictureBloc[i].addEventListener('mouseleave', hideDetails);
   }
 
 
