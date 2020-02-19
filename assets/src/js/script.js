@@ -38,52 +38,28 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
-// $(".overflow").mouseenter(function(event) {
-//   console.log(this);
-//   console.log($(this));
-// $(".nav_button").mouseover(function() {
-//   var button = $(this).attr("href");
-//   var buttonPosition = $(button).offset().top;
-//   var nextButtonPosition = $(button).next().offset().top;
-//   var scroll = $(document).scrollTop();
-//   // var buttonPositionb = buttonPosition + button.height();
-//   console.log(buttonPosition);
-//   console.log(scroll)
-//   console.log(nextButtonPosition);
-//   // console.log(buttonPosition + $(button).height())
-
-//   if(nextButtonPosition >= scroll && scroll >= buttonPosition) {
-//     $(this).css("color", "red");
-//   } else {
-//     $(this).css("color", "white");
-//   }
-// })
-// console.log(event.target)
-// })
-
+// APPLIQUE UN FOND SUR UN BOUTTON DE LA NAV LORSQUE L'UTILISATEUR EST DANS LA BONNE SECTION
 $(window).scroll(function () {
   var tab = $(".overflow");
-  // console.log(tab)
-  console.log($(document).scrollTop());
+  var scroll = $(document).scrollTop();
   for (var i = 0; i < tab.length; i++) {
-    // console.log(i);
-    // console.log(tab[i]);
-    // console.log(tab.eq(i));
     var id = tab.eq(i).attr("id");
-    
-    if(i < tab.length-1) {
-    // console.log(tab.eq(i).offset().top);
-    // console.log(tab.eq(i+1).offset().top);
-    if($(document).scrollTop() >= tab.eq(i).offset().top && $(document).scrollTop() <= tab.eq(i+1).offset().top) {
-      console.log($("a[href='#" + id +"']").css("color", "red"));
-    } else {
-      console.log($("a[href='#" + id +"']").css("color", "white"));
-    }
+    var topPosition = tab.eq(i).offset().top;
+    var outerHeight = tab.eq(i).outerHeight()
+    var footerTopPosition = $("footer").offset().top;
+    if (i < tab.length - 1) {
+      var padding = parseInt(tab.eq(i).css("padding-top"));
+      if (scroll > (topPosition - padding) && scroll < (topPosition + outerHeight - padding)) {
+        $("a[href='#" + id + "']").parent().addClass("button_active");
+
+      } else {
+        $("a[href='#" + id + "']").parent().removeClass("button_active");
+      }
     } else {
       // console.log(tab.eq(i).offset().top);
+      // if(scroll > (topPosition - padding) )
     }
-    
+
   }
 })
 
