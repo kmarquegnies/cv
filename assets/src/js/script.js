@@ -38,6 +38,25 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// APPLIQUE UN FOND SUR UN BOUTTON DE LA NAV LORSQUE L'UTILISATEUR EST DANS LA BONNE SECTION
+$(window).scroll(function () {
+  var tab = $(".overflow");
+  var scroll = $(document).scrollTop();
+  for (var i = 0; i < tab.length; i++) {
+    var id = tab.eq(i).attr("id");
+    var topPosition = tab.eq(i).offset().top;
+    var outerHeight = tab.eq(i).outerHeight()
+    var footerTopPosition = $("footer").offset().top;
+    var padding = parseInt(tab.eq(i).css("padding-top"));
+    if (scroll > (topPosition - padding) && scroll < (topPosition + outerHeight - padding)) {
+      $("a[href='#" + id + "']").parent().addClass("button_active");
+
+    } else {
+      $("a[href='#" + id + "']").parent().removeClass("button_active");
+    }
+  }
+})
+
 if (document.getElementById("page_content") != null) {
   /*--FAIS APPARAITRE/DISPARAITRE LE TEXTE DES IMAGES LOISIR--*/
   var pictureBloc = document.getElementsByClassName("picture_animation");
