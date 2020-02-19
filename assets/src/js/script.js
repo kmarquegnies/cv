@@ -47,19 +47,13 @@ $(window).scroll(function () {
     var topPosition = tab.eq(i).offset().top;
     var outerHeight = tab.eq(i).outerHeight()
     var footerTopPosition = $("footer").offset().top;
-    if (i < tab.length - 1) {
-      var padding = parseInt(tab.eq(i).css("padding-top"));
-      if (scroll > (topPosition - padding) && scroll < (topPosition + outerHeight - padding)) {
-        $("a[href='#" + id + "']").parent().addClass("button_active");
+    var padding = parseInt(tab.eq(i).css("padding-top"));
+    if (scroll > (topPosition - padding) && scroll < (topPosition + outerHeight - padding)) {
+      $("a[href='#" + id + "']").parent().addClass("button_active");
 
-      } else {
-        $("a[href='#" + id + "']").parent().removeClass("button_active");
-      }
     } else {
-      // console.log(tab.eq(i).offset().top);
-      // if(scroll > (topPosition - padding) )
+      $("a[href='#" + id + "']").parent().removeClass("button_active");
     }
-
   }
 })
 
