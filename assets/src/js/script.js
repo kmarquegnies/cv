@@ -51,17 +51,27 @@ window.addEventListener("scroll", function () {
 $(window).scroll(function () {
   var tab = $(".overflow");
   var scroll = $(document).scrollTop();
-  for (var i = 0; i < tab.length; i++) {
-    var id = tab.eq(i).attr("id");
-    var topPosition = tab.eq(i).offset().top;
-    var outerHeight = tab.eq(i).outerHeight()
-    var footerTopPosition = $("footer").offset().top;
-    var padding = parseInt(tab.eq(i).css("padding-top"));
-    if (scroll > (topPosition - padding) && scroll < (topPosition + outerHeight - padding)) {
-      $("a[href='#" + id + "']").parent().addClass("button_active");
+  var footerTopPosition = $("footer").offset().top;
+  var footerHeight = $("footer").innerHeight()
+  var footer = footerHeight + Math.round(footerTopPosition)
+  var windowHeight = $(window).innerHeight()
 
-    } else {
-      $("a[href='#" + id + "']").parent().removeClass("button_active");
+  if(scroll + windowHeight >= footer) {
+    $(".nav_button").parent().removeClass("button_active")
+    $("a[href='#contact']").parent().addClass("button_active");
+  } else {
+    for (var i = 0; i < tab.length; i++) {
+      var id = tab.eq(i).attr("id");
+      var topPosition = tab.eq(i).offset().top;
+      var outerHeight = tab.eq(i).outerHeight()
+      
+      var padding = parseInt(tab.eq(i).css("padding-top"));
+      
+      if (scroll > (topPosition - padding) && scroll < (topPosition + outerHeight - padding)) {
+        $("a[href='#" + id + "']").parent().addClass("button_active");
+      } else {
+        $("a[href='#" + id + "']").parent().removeClass("button_active");
+      }
     }
   }
 })
