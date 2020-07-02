@@ -10,9 +10,10 @@ var fixe = menu.offsetTop;
 //Récupère l'icône chevron-haut dans une variable
 var topScroll = document.getElementsByClassName("fa-chevron-circle-up")[0];
 
-//Récupère la section about dans une variable
+//Récupère la première section de chaque page dans une variable
 var aboutSection = document.getElementById("about");
 var legalSection = document.getElementById("legal_page");
+var sitemapSection = document.getElementById("sitemap")
 /*Si la position offset de la page est supérieure ou 
 égale à la position offset du menu alors le menu 
 obtient la classe fixed qui le rend fixe et 
@@ -25,7 +26,11 @@ window.addEventListener("scroll", function () {
     if (document.getElementById("page_content") != null) {
       aboutSection.style.paddingTop = "calc(4em + 51px)";
     } else {
+      if(document.getElementById("legal_page") != null) {
       legalSection.style.paddingTop = "calc(4em + 51px)";
+      } else {
+        sitemapSection.style.paddingTop = "calc(4em + 51px)";
+      }
     }
   } else {
     menu.classList.remove("fixed");
@@ -33,7 +38,11 @@ window.addEventListener("scroll", function () {
     if (document.getElementById("page_content") != null) {
       aboutSection.style.paddingTop = "4em";
     } else {
-      legalSection.style.paddingTop = "4em";
+      if(document.getElementById("legal_page") != null) {
+        legalSection.style.paddingTop = "4em";
+        } else {
+          sitemapSection.style.paddingTop = "4em";
+        }
     }
   }
 });
