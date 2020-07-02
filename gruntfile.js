@@ -39,6 +39,16 @@ module.exports = function(grunt) {
             }]
         }
       },
+      watch: {
+        styles: {
+          files: ['assets/src/css/*.scss'],
+          tasks: ['sass']
+        },
+        scripts: {
+          files: ['assets/src/js/*.js'],
+          tasks: ['uglify']
+        },
+      },
       clean: ['assets/js', 'assets/css']
     });
   
@@ -47,6 +57,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-sass");
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-watch');
   
     // Default task(s).
     grunt.registerTask('default', ['clean', 'sass', 'uglify', 'imagemin']);
