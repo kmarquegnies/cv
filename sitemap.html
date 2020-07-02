@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name='author' content='Kévin Marquegnies'>
+        <meta name="google-site-verification" content="sZKeaiDXYbi6Wfxg-wZSidnhTHRKPcGhWdXeUeoBZ-U" />
+        <meta name='description' content='Plan du site CV de Kévin Marquegnies, développeur junior web et web mobile'>
+        <meta name='keywords' content="Kévin, Marquegnies, développement, web, mobile, junior, Lille, Roubaix, Tourcoing, Hauts-de-France, Nord, CV, portfolio, parcours, compétence, , html, css, javascript, node, angular, vue, mysql, ruby, ruby on rails, php, laravel, symfony, git, ionic">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="assets/css/style.min.css">
+        <title>Plan du site - Kévin Marquegnies - Développeur Web</title>
+    </head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div id="header_title">
+            <h1><a href='index.html' id='title'>kévin marquegnies</a></h1>
+            <h2>Développeur Web / Mobile Junior</h2>
+        </div>
+
+        <!-- MENUS -->
+        <nav>
+
+            <!-- MENU LARGE SCREEN -->
+            <ul id="menu">
+                <li><a href="index.html#about">A propos</a></li>
+                <li><a href="index.html#skills">Compétences</a></li>
+                <li><a href="index.html#schooling">Formations</a></li>
+                <li><a href="index.html#experience">Expériences</a></li>
+                <li><a href="index.html#achievement">Réalisations</a></li>
+                <li><a href="index.html#hobbies">Loisirs</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <!-- MENU RESPONSIVE -->
+            <div id="responsive_menu">
+                <i class="fas fa-bars" onclick="menuAppear()"></i>
+                <i class="fas fa-times" onclick="menuAppear()"></i>
+                <ul id="list_menu"></ul>
+            </div>
+        </nav>
+    </header>
+    <!-- END HEADER -->
+
+    <section id='sitemap'>
+        <h1>Plan du site</h1>
+        <div class="links">
+            <a href='index.html'>Page d'accueil</a>
+            <a href='legal.html'>Mentions légales</a>
+            <a href='sitemap.html'>Plan du site</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2020 Marquegnies Kévin. Tous droits réservés.</p>
+        <a href="legal.html">Mentions légales</a>
+    </footer>
+    <!-- END FOOTER -->
+
+    <a href="#"><i class="fas fa-chevron-circle-up"></i></a>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

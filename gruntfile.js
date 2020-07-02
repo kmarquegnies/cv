@@ -17,6 +17,7 @@ module.exports = function(grunt) {
             'assets/css/index.min.css' : 'assets/src/css/index.scss',
             'assets/css/footer.min.css' : 'assets/src/css/footer.scss',
             'assets/css/legal.min.css' : 'assets/src/css/legal.scss',
+            'assets/css/sitemap.min.css' : 'assets/src/css/sitemap.scss',
           }
         }
         },
