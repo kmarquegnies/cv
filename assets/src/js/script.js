@@ -14,15 +14,12 @@ var topScroll = document.getElementsByClassName("fa-chevron-circle-up")[0];
 var aboutSection = document.getElementById("about");
 var legalSection = document.getElementById("legal_page");
 var sitemapSection = document.getElementById("sitemap")
+
 /*Si la position offset de la page est supérieure ou 
 égale à la position offset du menu alors le menu 
 obtient la classe fixed qui le rend fixe et 
 le faire suivre le srcoll*/
 
-// Redirection pour formater l'url de la page d'accueil
-if(document.location.pathname == "/index.html") {
-  document.location.href = "/"
-}
 window.addEventListener("scroll", function () {
   if (window.pageYOffset >= fixe) {
     menu.classList.add("fixed");
@@ -62,7 +59,7 @@ $(window).scroll(function () {
 
   if(scroll + windowHeight >= footer) {
     $(".nav_button").parent().removeClass("button_active")
-    $("a[href='#contact']").parent().addClass("button_active");
+    $("a[href='../#contact']").parent().addClass("button_active");
   } else {
     for (var i = 0; i < tab.length; i++) {
       var id = tab.eq(i).attr("id");
@@ -72,9 +69,9 @@ $(window).scroll(function () {
       var padding = parseInt(tab.eq(i).css("padding-top"));
       
       if (scroll > (topPosition - padding) && scroll < (topPosition + outerHeight - padding)) {
-        $("a[href='#" + id + "']").parent().addClass("button_active");
+        $("a[href='../#" + id + "']").parent().addClass("button_active");
       } else {
-        $("a[href='#" + id + "']").parent().removeClass("button_active");
+        $("a[href='../#" + id + "']").parent().removeClass("button_active");
       }
     }
   }
