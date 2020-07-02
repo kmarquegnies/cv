@@ -19,6 +19,10 @@ var sitemapSection = document.getElementById("sitemap")
 obtient la classe fixed qui le rend fixe et 
 le faire suivre le srcoll*/
 
+// Redirection pour formater l'url de la page d'accueil
+if(document.location.pathname == "/index.html") {
+  document.location.href = "/"
+}
 window.addEventListener("scroll", function () {
   if (window.pageYOffset >= fixe) {
     menu.classList.add("fixed");
