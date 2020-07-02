@@ -9,6 +9,16 @@ header {
 
     h1 {
         text-transform: uppercase;
+
+        a:hover {
+            color: white;
+            font-size: 1.1em;
+            transition: all ease 1s;
+        }
+
+        a {
+            transition: all ease 1s;
+        }
     }
 }
 

@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAAQ,uKAA+J,CAC/J,6BAAqB,CACrB,6BAAqB,CACrB,4BAAoB,CACpB,6BAAqB,CACrB,4BAAoB,CACpB,sEAA8D",
-"sources": ["../src/css/style.scss"],
-"names": [],
-"file": "style.min.css"
-}
+{"version":3,"sourceRoot":"","sources":["../src/css/style.scss"],"names":[],"mappings":"AAAQ,kKACA,wBACA,wBACA,uBACA,wBACA,uBACA","file":"style.min.css"}

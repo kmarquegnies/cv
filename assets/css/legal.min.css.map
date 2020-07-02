@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAAA,WAAY,CACR,WAAW,CAAE,GAAG,CAEhB,cAAG,CACC,UAAU,CAAE,MAAM,CAClB,UAAU,CAAE,GAAG,CAGnB,uBAAY,CACR,MAAM,CAAE,GAAG",
-"sources": ["../src/css/legal.scss"],
-"names": [],
-"file": "legal.min.css"
-}
+{"version":3,"sourceRoot":"","sources":["../src/css/legal.scss"],"names":[],"mappings":"AAAA,YACI,gBAEA,eACI,kBACA,eAGJ,wBACI","file":"legal.min.css"}
