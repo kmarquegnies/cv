@@ -2,7 +2,7 @@
    "name": "cv",
    "version": "0.1.0",
    "devDependencies": {
-      "grunt": "~1.1.0",
+      "grunt": "~1.5.2",
       "grunt-contrib-clean": "^2.0.0",
       "grunt-contrib-imagemin": "^4.0.0",
       "grunt-contrib-sass": "^1.0.0",
